@@ -7,11 +7,11 @@ type Props = {
 }
 
 export const MessageCard: Component<Props> = (props) => (
-  <div>
-    <div class="m-6 select-text">
+  <div class="select-text">
+    <div class="m-6 prose dark:prose-invert max-w-full">
       <For
         each={props.message.body.split('\n').filter((line) => line.length > 0)}>
-        {(line) => <p class="my-2 first:mt-0 last:mb-0">{line}</p>}
+        {(line) => <p>{line}</p>}
       </For>
     </div>
   </div>

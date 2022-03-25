@@ -67,7 +67,7 @@ export const Messages: Component<Props> = (props) => {
   })
 
   return (
-    <div class="w-72 border-r dark:border-neutral-800 border-neutral-200 flex flex-col">
+    <div class="w-1/3 max-w-sm border-r dark:border-neutral-800 border-neutral-200 flex flex-col">
       <div class="flex border-b dark:border-neutral-800 border-neutral-200">
         <input
           class="p-3 flex-1 bg-transparent placeholder:text-neutral-600 dark:placeholder:text-neutral-400"
@@ -92,7 +92,7 @@ export const Messages: Component<Props> = (props) => {
             <button
               onClick={() => props.onChange(item)}
               class={twMerge(
-                'text-left p-3 border-t first:border-t-0 border-neutral-100 dark:border-neutral-900 w-full flex items-center',
+                'text-left p-3 border-t first:border-t-0 border-neutral-200 dark:border-neutral-800 w-full flex items-center',
                 props.message?.id === item.id &&
                   'bg-primary-100 dark:bg-primary-900'
               )}>
@@ -102,9 +102,11 @@ export const Messages: Component<Props> = (props) => {
               />
 
               <div class="flex-1 ml-3">
-                <div class="font-medium">{item.sender}</div>
-                <div class="text-sm my-2">{item.subject}</div>
-                <div class="text-xs text-neutral-600 dark:text-neutral-400">
+                <div class="text-sm leading-none font-medium">
+                  {item.sender}
+                </div>
+                <div class="my-2">{item.subject}</div>
+                <div class="text-xs text-neutral-600 leading-none dark:text-neutral-400">
                   {format(item.time, 'Pp')}
                 </div>
               </div>
