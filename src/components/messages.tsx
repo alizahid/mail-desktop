@@ -17,14 +17,14 @@ type Props = {
 export const Messages: Component<Props> = (props) => {
   const data: Array<Message> = orderBy(
     range(100).map(() => {
-      const sender = faker.name.findName()
+      const sender = `${faker.name.firstName()} ${faker.name.lastName()}`
 
       const paragraphs = faker.datatype.number({
         max: 5,
         min: 2
       })
 
-      const body = `Hey ${faker.name.firstName()},\n${faker.lorem.paragraphs(
+      const body = `Hey Ali,\n${faker.lorem.paragraphs(
         paragraphs,
         '\n'
       )}\nThanks,\n${sender}`
