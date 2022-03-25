@@ -1,0 +1,45 @@
+{
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:solid/typescript",
+    "plugin:prettier/recommended"
+  ],
+  "overrides": [
+    {
+      "files": ["*.js"],
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off"
+      }
+    }
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "sort-keys-fix",
+    "sort-destructure-keys",
+    "simple-import-sort",
+    "solid",
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": "error",
+    "simple-import-sort/exports": "error",
+    "simple-import-sort/imports": "error",
+    "solid/jsx-no-undef": "error",
+    "solid/no-destructure": "error",
+    "solid/reactivity": "error",
+    "sort-destructure-keys/sort-destructure-keys": "error",
+    "sort-keys-fix/sort-keys-fix": "error"
+  }
+}

@@ -1,0 +1,21 @@
+/* fonts */
+
+@import url('https://api.fontshare.com/css?f[]=satoshi@1&display=swap');
+
+/* global */
+
+::selection {
+  @apply text-black bg-primary-200 dark:bg-primary-800 dark:text-white;
+}
+
+body {
+  @apply overflow-hidden text-black bg-white cursor-default select-none dark:text-white dark:bg-black font-body;
+}
+
+a {
+  @apply transition-colors;
+}
+
+input {
+  @apply focus:outline-none;
+}
