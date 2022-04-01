@@ -56,6 +56,8 @@
       {
         "title": "Mail",
         "width": 800,
+        "minHeight": 600,
+        "minWidth": 800,
         "height": 600,
         "resizable": true,
         "fullscreen": false

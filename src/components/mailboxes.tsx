@@ -47,7 +47,7 @@ export const Mailboxes: Component<Props> = (props) => {
   return (
     <div
       data-tauri-drag-region
-      class="w-48 border-r border-neutral-200 dark:border-neutral-800 flex flex-col">
+      class="w-44 flex flex-col border-r dark:border-neutral-800 border-neutral-200">
       <div class="my-6 flex flex-col">
         <For each={mailboxes}>
           {(item) => (
@@ -67,7 +67,7 @@ export const Mailboxes: Component<Props> = (props) => {
                 name={item.icon}
                 size={20}
               />
-              <span class="ml-3 leading-none">{item.name}</span>
+              <span class="ml-3 text-sm leading-none">{item.name}</span>
             </button>
           )}
         </For>
